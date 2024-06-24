@@ -1,5 +1,8 @@
 import random
 
+#Global Variables
+number_of_guess = 0
+
 # UPPER LIMIT NUMBER
 upper_number = input("Please provide upper limit number: ")
 
@@ -19,7 +22,7 @@ else:
 
 # GUESS NUMBER
 while True:
-
+    number_of_guess += 1
     guess_number = input("Please guess a number: ")
 
     # Make sure input is a digit and convert to an integer.
@@ -35,3 +38,5 @@ while True:
     else:
         print("please try again")
         continue
+
+print(f"It took you {number_of_guess} tries :)")
