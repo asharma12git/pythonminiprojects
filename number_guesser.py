@@ -36,7 +36,11 @@ while True:
         print("Congrats! You have won")
         break
     else:
-        print("please try again")
+        if random_number > guess_number:
+            print("you are below the the number!")
+        else:
+            print("You are above the number!")
+        print("Please try again")
         continue
 
 print(f"It took you {number_of_guess} tries :)")
