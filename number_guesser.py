@@ -1,6 +1,6 @@
 import random
 
-#Global Variables
+# Global Variables
 number_of_guess = 0
 
 # UPPER LIMIT NUMBER
@@ -35,12 +35,13 @@ while True:
     if guess_number == random_number:
         print("Congrats! You have won")
         break
+
+    # using elif instead of else --> if else again.
+    elif random_number > guess_number:
+        print("you are below the the number!")
     else:
-        if random_number > guess_number:
-            print("you are below the the number!")
-        else:
-            print("You are above the number!")
+        print("You are above the number!")
         print("Please try again")
-        continue
+    continue
 
 print(f"It took you {number_of_guess} tries :)")
